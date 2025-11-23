@@ -6,19 +6,6 @@ launch:
     name: apriltag_container
     namespace: ""
     composable_node:
-    - pkg: realsense2_camera
-      plugin: realsense2_camera::RealSenseNodeFactory
-      name: camera
-      namespace: camera
-      param:
-      - name: enable_color
-        value: true
-      - name: enable_depth
-        value: false
-      extra_arg:
-      - name: use_intra_process_comms
-        value: "True"
-
     - pkg: image_proc
       plugin: image_proc::RectifyNode
       name: rectify
